@@ -20,6 +20,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <ui:Button
@@ -34,5 +36,12 @@
             Margin="12,0,0,0"
             VerticalAlignment="Center"
             Text="{Binding ViewModel.Text, Mode=TwoWay}" />
+
+        <ui:Button
+            Grid.Column="2"
+            Command="{Binding ViewModel.TextChangedCommand, Mode=OneWay}"
+            Content="Click me!"
+            Icon="Fluent24" />
+
     </Grid>
 </Page>

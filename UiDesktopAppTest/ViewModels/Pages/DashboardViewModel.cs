@@ -34,5 +34,11 @@
             this.Text = "Clicked!";
 
         }
+
+        [RelayCommand]
+        private void OnTextChanged()
+        {
+
+        }
     }
 }
