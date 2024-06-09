@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using System.IO;
 using System.Reflection;
 using System.Windows.Threading;
+using UiDesktopAppTest.Interfaces;
 using UiDesktopAppTest.Services;
 using UiDesktopAppTest.ViewModels.Pages;
 using UiDesktopAppTest.ViewModels.Windows;
@@ -45,6 +46,9 @@ namespace UiDesktopAppTest
                 // Main window with navigation
                 services.AddSingleton<INavigationWindow, MainWindow>();
                 services.AddSingleton<MainWindowViewModel>();
+
+                services.AddSingleton<IDateTime, DateTimeService>();
+
 
                 services.AddSingleton<DashboardPage>();
                 services.AddSingleton<DashboardViewModel>();
